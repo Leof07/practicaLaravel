@@ -6,5 +6,15 @@
 <td>montoPlanificado</td>
 <td>montoPatrocinado</td>
 <td>montoFondosPropios</td>
-</tr>     
+</tr>    
+@foreach ($listaProyectos as $proyecto)
+    <tr>
+        <td>{{ $proyecto->id  }}</td>
+        <td>{{ $proyecto->nombreProyecto }}</td>
+        <td>{{ $proyecto->fuenteFondos }}</td>
+        <td>{{ $proyecto->montoPlanificado }}</td>
+        <td>{{ $proyecto->montoPatrocinado }}</td>
+        <td>{{ $proyecto->montoFondosPropios }}</td>
+    </tr>  
+@endforeach
 </table>

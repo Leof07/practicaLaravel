@@ -10,6 +10,10 @@ class Proyecto extends Controller
     public function index ()
     {
         $listaProyectos=ModelsProyecto::all();
-        return view('listProyectos', compact('listaProyectos'));
+        return view('listProyecto', compact('listaProyectos'));
+    }
+    public function createForm()
+    {
+        return view('createForm');
     }
 }
